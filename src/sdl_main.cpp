@@ -1,25 +1,26 @@
-#include <M5GFX.h>
-#if defined ( SDL_h_ )
+#include <M5GFX.h>  // Incluye la librería M5GFX para manejo gráfico
+#if defined(SDL_h_) // Comprueba si SDL (Simple DirectMedia Layer) está definida
 
-void setup(void);
-void loop(void);
+void setup(void); // Declaración de la función setup
+void loop(void);  // Declaración de la función loop
 
-__attribute__((weak))
-int user_func(bool* running)
+// Función débil que se puede sobrescribir
+__attribute__((weak)) int user_func(bool *running)
 {
-  setup();
+  setup(); // Llama a la función setup una vez
   do
   {
-    loop();
-  } while (*running);
-  return 0;
+    loop(); // Llama repetidamente a la función loop
+  } while (*running); // Continúa mientras el puntero running apunte a true
+  return 0; // Devuelve 0 al finalizar
 }
 
-int main(int, char**)
+// Función principal de la aplicación
+int main(int, char **)
 {
-  // The second argument is effective for step execution with breakpoints.
-  // You can specify the time in milliseconds to perform slow execution that ensures screen updates.
-  return lgfx::Panel_sdl::main(user_func, 128);
+  // El segundo argumento es efectivo para la ejecución paso a paso con puntos de interrupción.
+  // Puedes especificar el tiempo en milisegundos para realizar una ejecución lenta que asegure las actualizaciones de pantalla.
+  return lgfx::Panel_sdl::main(user_func, 128); // Llama a la función main de Panel_sdl con user_func y un tiempo de 128 ms
 }
 
 #endif
