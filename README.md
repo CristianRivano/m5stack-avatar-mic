@@ -1,41 +1,75 @@
-# m5stack-avatar-mic
-マイクを使ったM5Stack Avatarの例です。
-音に合わせてAvatarが口パクしたり、傾いたりします。
+M5stack-avatar-mic
 
-# 対応デバイス
+Este es un ejemplo de M5Stack Avatar utilizando un micrófono.
+El avatar mueve la boca y se inclina en respuesta al sonido.
 
-- M5Stack Core2/Core2 V1.1/AWS
-- M5StickC
-- M5StickCPlus
-- ATOMS3 + PDMUnit
-- M5Stack CoreS3
-- M5Stack CoreS3SE
-- M5Stack Fire
-- M5Dial + PDMUnit(Port.A)
 
-# 環境
+---
 
-・VSCode + PlatformIO
+Dispositivos compatibles
 
-ArduinoIDEの場合は下記のように名前を変更してください。
-- srcフォルダ -> m5stack-avatar-mic
-- main.cpp -> m5stack-avatar-mic.ino
+M5Stack Core2/Core2 V1.1/AWS
 
-# 動作確認済みボード・ライブラリバーョン
+M5StickC
 
-詳細はplatformio.iniを見てください。
+M5StickCPlus
 
-## ボード
+ATOMS3 + PDMUnit
 
-- espressif 6.5.0
+M5Stack CoreS3
 
-## ライブラリ
-- M5Stack-Avatar v0.9.2
-- M5Unified v0.1.16
+M5Stack CoreS3SE
 
-# LICENSE
-[MIT](https://github.com/mongonta0716/m5stack-avatar-mic/blob/main/LICENSE)
+M5Stack Fire
 
-# Author
+M5Dial + PDMUnit (Port.A)
 
-[Takao Akaki](https://github.com/mongonta0716)
+
+
+---
+
+Entorno de desarrollo
+
+VSCode + PlatformIO
+
+
+Si utilizas Arduino IDE, realiza los siguientes cambios:
+
+Cambia el nombre de la carpeta src a m5stack-avatar-mic.
+
+Cambia el nombre del archivo main.cpp a m5stack-avatar-mic.ino.
+
+
+
+---
+
+Placas y versiones de librerías verificadas
+
+Consulta el archivo platformio.ini para obtener más detalles.
+
+Placa
+
+Espressif 6.5.0
+
+
+Librerías
+
+M5Stack-Avatar v0.9.2
+
+M5Unified v0.1.16
+
+
+
+---
+
+Licencia
+
+MIT License
+
+
+---
+
+Autor
+
+Takao Akaki
+
